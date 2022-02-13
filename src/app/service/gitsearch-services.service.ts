@@ -11,7 +11,7 @@ export class GitsearchServicesService {
 
   constructor(private_http:HttpClient)   { }
    gitsearchUrl = "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"
-  Navbar():observable<any>
+  Navbar():Observable<any>
 {
 return this._http.get(this.gitsearchUrl)
 }
