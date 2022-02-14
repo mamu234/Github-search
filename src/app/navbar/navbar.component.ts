@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { subscribeOn } from 'rxjs';
-import { GitsearchServicesService } from '../service/gitsearch-services.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -10,11 +10,14 @@ import { GitsearchServicesService } from '../service/gitsearch-services.service'
 export class NavbarComponent implements OnInit {
   private _services: any;
 
-  constructor(private_services:GitsearchServicesService) { }
+  constructor() { }
+
+  navbarDisplay: any = [];
 
   ngOnInit(): void {
     this._services.navbar().subscribe((result: any) => {
       console.log(result)
+      this.navbarDisplay = result.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
     })
   }
 }
