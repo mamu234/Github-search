@@ -3,17 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 
 import { UserComponent } from './user/user.component';
+import { GitsearchService } from './gitsearch.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     UserComponent,
+  
   
   ],
   imports: [
@@ -21,7 +21,7 @@ import { UserComponent } from './user/user.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [GitsearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

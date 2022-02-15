@@ -1,1 +1,48 @@
-<p>user works!</p>
+
+<div *ngIf="user">
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+
+{{user.name}} <small> {{user.login}}</small>
+   
+<span *ngif="user.company">, works at {{user.company}}</span>
+
+</div>
+
+<div class="panel-body">
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="{{user.avatar_url}}" alt="profiel image">
+
+        </div>
+
+    </div>
+
+    <div class="col-sm-5">
+
+        <ul class="list-group"> 
+            <li class="list-group-items">{{user.bio}}
+
+            </li>
+         </ul>
+    </div>
+<div class="col-sm-4">
+    <div>
+        <p>
+            <span class="label label-default"> {{user.followers}} followers</span>
+            <span class="label label-default"> {{user.following}} followings</span>
+            <span class="label label-default"> {{user.public_gists}} public gists</span>
+            <span class="label label-default"> {{user.public_repos}} public repos</span>
+        </p>
+<p> <a href="{{user.html_url}}" target="_blank" class="btn btn-success btn-sm"> View profile on github</a>
+
+</p>
+
+    </div>
+
+</div>
+
+</div>
+</div>
+</div>
