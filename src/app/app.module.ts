@@ -7,12 +7,14 @@ import { HttpClientModule} from '@angular/common/http';
 
 import { UserComponent } from './user/user.component';
 import { GitsearchService } from './gitsearch.service';
+import { RepoComponent } from './repo/repo.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
+    RepoComponent,
   
   
   ],

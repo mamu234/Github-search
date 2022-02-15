@@ -9,10 +9,10 @@ export class UserComponent implements OnInit {
   
 
   user: any;
-  repos:any;
-  username: string = 'mamu234'
-  imageWidth: number = 150;
-  imageHeight: number = 200;
+
+  username: string = '';
+  imageWidth: number = 300;
+  imageHeight: number = 250;
 
   constructor(private gitsearchService: GitsearchService) { 
     
@@ -24,10 +24,7 @@ export class UserComponent implements OnInit {
       this.user = user;
     });
  
-    this.gitsearchService.getUserInfo().subscribe(repos => {
-      console.log(repos);
-      this.repos = repos;
-    });
+ 
 
   }
 
