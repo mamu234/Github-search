@@ -9,8 +9,8 @@ export class UserComponent implements OnInit {
   
 
   user: any;
-  userRepos:any;
-  username: string = 'njoroge33'
+  repos:any;
+  username: string = 'mamu234'
   imageWidth: number = 150;
   imageHeight: number = 200;
 
@@ -19,14 +19,15 @@ export class UserComponent implements OnInit {
   }
 
   getUser () {
-   
-
     this.gitsearchService.getUserInfo().subscribe(user => {
       console.log(user);
       this.user = user;
     });
  
- 
+    this.gitsearchService.getUserInfo().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    });
 
   }
 
