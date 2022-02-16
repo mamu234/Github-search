@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<!-- <div class="panel panel-default">
     <div class="panel-heading">
 
 <h4 class="panel-title">Repos </h4>
@@ -9,6 +9,16 @@
 
         </p>
     </div>
-</div>
+</div> -->
    
 
+<div *ngIf="repo" >
+    <div class="card" *ngFor='let repo of repo'>
+        <div class="card-body" appHighlight>
+            <a href="{{repo.html_url}}" target="_blank"><strong>{{repo.name}}</strong></a>
+            <p><strong>Created:</strong> {{repo.created_at|dateCount}</p>
+            <p><strong>Created by:</strong> {{repo.owner.login}}</p>
+            <p><strong>Language used:</strong> {{repo.language}}</p>
+            <p>{{repo.description}}</p>
+        </div>
+    </div>

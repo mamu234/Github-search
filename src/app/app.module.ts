@@ -8,6 +8,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { UserComponent } from './user/user.component';
 import { GitsearchService } from './gitsearch.service';
 import { RepoComponent } from './repo/repo.component';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { RepoComponent } from './repo/repo.component';
     AppComponent,
     UserComponent,
     RepoComponent,
+    DateCountPipe,
   
   
   ],
