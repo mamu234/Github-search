@@ -1,10 +1,11 @@
 
 <div *ngIf="user">
+    <!-- <li appHighlight>{{user.name}}</li> -->
 
 <div class="panel panel-default">
     <div class="panel-heading">
 
-{{user.name}} <small> {{user.login}}</small>
+ <small> {{user.login}}</small>
    
 <span *ngif="user.company">, works at {{user.company}}</span>
 

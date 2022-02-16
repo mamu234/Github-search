@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 import { GitsearchService } from './gitsearch.service';
 import { RepoComponent } from './repo/repo.component';
 import { DateCountPipe } from './date-count.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { DateCountPipe } from './date-count.pipe';
     UserComponent,
     RepoComponent,
     DateCountPipe,
+    HighlightDirective,
   
   
   ],
